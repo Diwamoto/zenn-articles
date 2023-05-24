@@ -1,0 +1,38 @@
+{
+  "title": "Amazon Cloud FrontにCDNを構築してみる",
+  "closed": true,
+  "archived": false,
+  "created_at": "2021-02-24",
+  "comments": [
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-24",
+      "body_markdown": "yourceのユーザのプロフィールの画像を保存する為の場所をCDNにします"
+    },
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-24",
+      "body_markdown": "yourceのフロントとバックエンドAPIはEC2におくので、合わせてawsのCloud Frontを使用してみたいと思います"
+    },
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-24",
+      "body_markdown": "サイトを見にいった感じ、S3等からデータを送信してくれるって感じか。\nまずはS3を構築してみる。"
+    },
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-24",
+      "body_markdown": "S3構築終了。とりあえずパラメータ等は変えずそのまま作ってみた。\nこれをCloud Frontと結びつければいいのね。。"
+    },
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-24",
+      "body_markdown": "と思ったけどそこにCDNを構築したとしてまだアップロードと表示の導線できていなかったのでいったんストップ。\nそちらができてから続きやる"
+    },
+    {
+      "author": "diwamoto",
+      "created_at": "2021-12-16",
+      "body_markdown": "今見るとよくわかんねえこと書いてんな。\nCloudFrontをちょっと理解した今見るとCDNをするためのものではないってことがわかりますはい"
+    }
+  ]
+}

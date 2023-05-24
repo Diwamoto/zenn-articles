@@ -1,0 +1,13 @@
+{
+  "title": "alpine:edgeの闇",
+  "closed": false,
+  "archived": false,
+  "created_at": "2021-02-12",
+  "comments": [
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-12",
+      "body_markdown": "alpine:edgeのdockerのビルド中に、\nphpのビルドをする時に絶対に`opration not permitted`が出る。だが、\nそのイメージをalpine:3.6でビルドするとでない。\nなんなんだよ、、、"
+    }
+  ]
+}

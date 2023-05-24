@@ -1,0 +1,25 @@
+{
+  "title": "vue js で子コンポーネントに変数を渡したにもかかわらず子コンポーネントに反映されない",
+  "closed": false,
+  "archived": false,
+  "created_at": "2021-02-22",
+  "comments": [
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-22",
+      "body_markdown": "[vue.js v2 コンポーネントの変数渡し](https://jp.vuejs.org/v2/guide/components-props.html)\n\nこれを見つつ、以下のようにコードを書いた\n```vue\n<template>\n  <v-app>\n    \n    <Child :hoge=\"hoge\"></Child>\n\n  </v-app>\n</template>\n\n<script>\nimport Child from '@/components/Child.vue'\nexport default {\n  name: \"Parent\",\n  components: {\n    Child,\n  },\n  name : \"Parent\",\n  data () {\n    return {\n      hoge: \"fuga\"\n    }\n  },\n</script>\n```\n\n",
+      "body_updated_at": "2021-02-22"
+    },
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-22",
+      "body_markdown": "その後、子コンポーネント側で変数とし使おうと以下のコードを使うと`undefined`になってしまう\n\n```vue\n<template>\n     <div>{{ hoge }}</div> <!-- 表示される -->\n</template>\n\n<script>\nexport default {\n  name: \"Child\",\n  props: {\n    hoge String,\n  },\n  data: function () {\n    return {\n     localHoge: this.hoge,\n    }\n  },\n  created(){\n      console.log(this.localHoge) //undefined\n  }  \n</script>\n```"
+    },
+    {
+      "author": "diwamoto",
+      "created_at": "2021-02-22",
+      "body_markdown": "ただ、この様に使うときちんと使える\nなんでだ、、、\n```vue\n<template>\n     <div>{{ hoge }}</div> <!-- 表示される -->\n</template>\n\n<script>\nexport default {\n  name: \"Child\",\n  props: {\n    hoge String,\n  },\n  data: function () {\n    return {\n     localHoge: this.hoge,\n    }\n  },\n  created(){\n      console.log(this.localHoge) // undefined\n\n      console.log(this.hoge) // \"hoge\"\n  }  \n</script>\n```",
+      "body_updated_at": "2021-02-22"
+    }
+  ]
+}
